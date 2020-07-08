@@ -44,11 +44,15 @@ const filterOption = document.querySelector(".filter-todo");
 
  function deleteCheck(e) {
      const item = e.target;
-    //Delete Todo
+    //Delete Todo 
     if (item.classList[0] === "trash-btn") {
         const todo = item.parentElement;
         removeLocalTodos(todo);
+        //Animation
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", function() {
         todo.remove();
+    });
     } 
 
 
@@ -94,7 +98,7 @@ const filterOption = document.querySelector(".filter-todo");
      }
 
      todos.push(todo);
-     localStorage.setItem("todos", JSPN.stringify(todos));
+     localStorage.setItem("todos", JSON.stringify(todos));
  }
 
  function getTodos() {

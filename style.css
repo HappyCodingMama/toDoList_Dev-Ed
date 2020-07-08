@@ -47,7 +47,7 @@ form button:hover {
     align-items: center;
 }
 
-.todo-List {
+.todo-list {
     min-width: 30%;
     list-style: none;
 }
@@ -91,6 +91,10 @@ form button:hover {
 .completed {
     text-decoration: line-through ;
     opacity: 0.5;
+}
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
 }
 
 select {
